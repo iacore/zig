@@ -1,5 +1,5 @@
 const builtin = @import("builtin");
-const std = @import("std");
+const std = @import("../../std.zig");
 
 const twop52: f64 = 0x1.0p52;
 const twop84: f64 = 0x1.0p84;

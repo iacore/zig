@@ -4,7 +4,7 @@
 //! Otherwise, only the functions which LLVM generates calls to need to be generated,
 //! such as memcpy, memset, and some math functions.
 
-const std = @import("std");
+const std = @import("../std.zig");
 const builtin = @import("builtin");
 const native_os = builtin.os.tag;
 

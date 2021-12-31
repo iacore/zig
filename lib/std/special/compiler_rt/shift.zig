@@ -1,4 +1,4 @@
-const std = @import("std");
+const std = @import("../../std.zig");
 const Log2Int = std.math.Log2Int;
 const native_endian = @import("builtin").cpu.arch.endian();
 

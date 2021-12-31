@@ -1,4 +1,4 @@
-const std = @import("std");
+const std = @import("../../../std.zig");
 const testing = std.testing;
 
 export fn add(a: i32, b: i32) i32 {

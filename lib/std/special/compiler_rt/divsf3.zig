@@ -2,7 +2,7 @@
 //
 // https://github.com/llvm/llvm-project/commit/d674d96bc56c0f377879d01c9d8dfdaaa7859cdb/compiler-rt/lib/builtins/divsf3.c
 
-const std = @import("std");
+const std = @import("../../std.zig");
 const builtin = @import("builtin");
 
 pub fn __divsf3(a: f32, b: f32) callconv(.C) f32 {

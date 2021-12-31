@@ -43,7 +43,7 @@ test "zig fmt: respect line breaks in struct field value declaration" {
 
 test "zig fmt: respect line breaks before functions" {
     try testCanonical(
-        \\const std = @import("std");
+        \\const std = @import("../std.zig");
         \\
         \\inline fn foo() void {}
         \\
@@ -2207,7 +2207,7 @@ test "zig fmt: first thing in file is line comment" {
         \\
         \\// Introspection and determination of system libraries needed by zig.
         \\
-        \\const std = @import("std");
+        \\const std = @import("../std.zig");
         \\
     );
 }
@@ -2684,7 +2684,7 @@ test "zig fmt: comments before test decl" {
 
 test "zig fmt: preserve spacing" {
     try testCanonical(
-        \\const std = @import("std");
+        \\const std = @import("../std.zig");
         \\
         \\pub fn main() !void {
         \\    var stdout_file = std.io.getStdOut;
@@ -2708,7 +2708,7 @@ test "zig fmt: return types" {
 
 test "zig fmt: imports" {
     try testCanonical(
-        \\const std = @import("std");
+        \\const std = @import("../std.zig");
         \\const std = @import();
         \\
     );
@@ -3837,8 +3837,8 @@ test "zig fmt: Block after if" {
 
 test "zig fmt: usingnamespace" {
     try testCanonical(
-        \\usingnamespace @import("std");
-        \\pub usingnamespace @import("std");
+        \\usingnamespace @import("../std.zig");
+        \\pub usingnamespace @import("../std.zig");
         \\
     );
 }
@@ -4661,7 +4661,7 @@ test "zig fmt: function params should align nicely" {
     try testCanonical(
         \\pub fn foo() void {
         \\    cases.addRuntimeSafety("slicing operator with sentinel",
-        \\        \\const std = @import("std");
+        \\        \\const std = @import("../std.zig");
         \\    ++ check_panic_msg ++
         \\        \\pub fn main() void {
         \\        \\    var buf = [4]u8{'a','b','c',0};
@@ -5334,7 +5334,7 @@ test "recovery: eof in c pointer" {
     });
 }
 
-const std = @import("std");
+const std = @import("../std.zig");
 const mem = std.mem;
 const print = std.debug.print;
 const io = std.io;

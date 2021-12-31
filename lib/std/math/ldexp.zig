@@ -4,7 +4,7 @@
 // https://git.musl-libc.org/cgit/musl/tree/src/math/ldexpf.c
 // https://git.musl-libc.org/cgit/musl/tree/src/math/ldexp.c
 
-const std = @import("std");
+const std = @import("../std.zig");
 const math = std.math;
 const assert = std.debug.assert;
 const expect = std.testing.expect;

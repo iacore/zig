@@ -1,5 +1,5 @@
 const cmp = @import("cmp.zig");
-const testing = @import("std").testing;
+const testing = @import("../../std.zig").testing;
 
 fn test__cmpdi2(a: i64, b: i64, expected: i64) !void {
     var result = cmp.__cmpdi2(a, b);

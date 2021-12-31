@@ -1,5 +1,5 @@
 const ctz = @import("count0bits.zig");
-const testing = @import("std").testing;
+const testing = @import("../../std.zig").testing;
 
 fn test__ctzdi2(a: u64, expected: i32) !void {
     var x = @bitCast(i64, a);

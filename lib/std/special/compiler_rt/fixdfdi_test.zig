@@ -1,5 +1,5 @@
 const __fixdfdi = @import("fixdfdi.zig").__fixdfdi;
-const std = @import("std");
+const std = @import("../../std.zig");
 const math = std.math;
 const testing = std.testing;
 

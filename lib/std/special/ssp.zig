@@ -12,7 +12,7 @@
 //! - __vsnprintf_chk
 //! - __vsprintf_chk
 
-const std = @import("std");
+const std = @import("../std.zig");
 
 extern fn strncpy(dest: [*:0]u8, src: [*:0]const u8, n: usize) callconv(.C) [*:0]u8;
 extern fn memset(dest: ?[*]u8, c: u8, n: usize) callconv(.C) ?[*]u8;

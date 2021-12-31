@@ -1,6 +1,6 @@
 const builtin = @import("builtin");
 const is_test = builtin.is_test;
-const std = @import("std");
+const std = @import("../../std.zig");
 const maxInt = std.math.maxInt;
 
 const significandBits = 112;

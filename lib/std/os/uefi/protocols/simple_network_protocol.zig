@@ -1,4 +1,4 @@
-const uefi = @import("std").os.uefi;
+const uefi = @import("../../../std.zig").os.uefi;
 const Event = uefi.Event;
 const Guid = uefi.Guid;
 const Status = uefi.Status;

@@ -2,7 +2,7 @@
 //
 // https://github.com/llvm/llvm-project/commit/d674d96bc56c0f377879d01c9d8dfdaaa7859cdb/compiler-rt/test/builtins/Unit/comparedf2_test.c
 
-const std = @import("std");
+const std = @import("../../std.zig");
 const builtin = @import("builtin");
 const is_test = builtin.is_test;
 

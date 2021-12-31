@@ -1,6 +1,6 @@
 //! CSPRNG
 
-const std = @import("std");
+const std = @import("../std.zig");
 const Random = std.rand.Random;
 const mem = std.mem;
 const Gimli = @This();

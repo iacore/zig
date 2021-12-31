@@ -1,5 +1,5 @@
 const clz = @import("count0bits.zig");
-const testing = @import("std").testing;
+const testing = @import("../../std.zig").testing;
 
 fn test__clzdi2(a: u64, expected: i64) !void {
     var x = @bitCast(i64, a);

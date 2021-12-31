@@ -3,7 +3,7 @@
 //
 // Heavily inspired by the simple decompressor puff.c by Mark Adler
 
-const std = @import("std");
+const std = @import("../std.zig");
 const io = std.io;
 const math = std.math;
 const mem = std.mem;

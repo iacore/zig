@@ -1,8 +1,8 @@
 // Builtin functions that operate on integer types
 const builtin = @import("builtin");
-const testing = @import("std").testing;
-const maxInt = @import("std").math.maxInt;
-const minInt = @import("std").math.minInt;
+const testing = @import("../../std.zig").testing;
+const maxInt = @import("../../std.zig").math.maxInt;
+const minInt = @import("../../std.zig").math.minInt;
 
 const udivmod = @import("udivmod.zig").udivmod;
 

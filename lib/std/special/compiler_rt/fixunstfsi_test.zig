@@ -1,5 +1,5 @@
 const __fixunstfsi = @import("fixunstfsi.zig").__fixunstfsi;
-const testing = @import("std").testing;
+const testing = @import("../../std.zig").testing;
 
 fn test__fixunstfsi(a: f128, expected: u32) !void {
     const x = __fixunstfsi(a);

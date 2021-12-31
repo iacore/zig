@@ -1,4 +1,4 @@
-const std = @import("std");
+const std = @import("../std.zig");
 const builtin = @import("builtin");
 const maxInt = std.math.maxInt;
 const isNan = std.math.isNan;

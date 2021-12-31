@@ -1,5 +1,5 @@
 const bswap = @import("bswap.zig");
-const testing = @import("std").testing;
+const testing = @import("../../std.zig").testing;
 
 fn test__bswapti2(a: u128, expected: u128) !void {
     var result = bswap.__bswapti2(a);

@@ -1,4 +1,4 @@
-const std = @import("std");
+const std = @import("../../std.zig");
 
 pub fn __negsf2(a: f32) callconv(.C) f32 {
     return negXf2(f32, a);

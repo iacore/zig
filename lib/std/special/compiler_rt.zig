@@ -1,4 +1,4 @@
-const std = @import("std");
+const std = @import("../std.zig");
 const builtin = @import("builtin");
 const is_test = builtin.is_test;
 const os_tag = builtin.os.tag;

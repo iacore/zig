@@ -1,5 +1,5 @@
 const __floatdisf = @import("floatXisf.zig").__floatdisf;
-const testing = @import("std").testing;
+const testing = @import("../../std.zig").testing;
 
 fn test__floatdisf(a: i64, expected: f32) !void {
     const x = __floatdisf(a);

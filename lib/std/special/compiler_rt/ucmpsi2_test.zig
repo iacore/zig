@@ -1,5 +1,5 @@
 const cmp = @import("cmp.zig");
-const testing = @import("std").testing;
+const testing = @import("../../std.zig").testing;
 
 fn test__ucmpsi2(a: u32, b: u32, expected: i32) !void {
     var result = cmp.__ucmpsi2(a, b);

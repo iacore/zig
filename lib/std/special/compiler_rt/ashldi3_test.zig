@@ -1,5 +1,5 @@
 const __ashldi3 = @import("shift.zig").__ashldi3;
-const testing = @import("std").testing;
+const testing = @import("../../std.zig").testing;
 
 fn test__ashldi3(a: i64, b: i32, expected: u64) !void {
     const x = __ashldi3(a, b);

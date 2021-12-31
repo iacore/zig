@@ -1,5 +1,5 @@
 const __modti3 = @import("modti3.zig").__modti3;
-const testing = @import("std").testing;
+const testing = @import("../../std.zig").testing;
 
 fn test__modti3(a: i128, b: i128, expected: i128) !void {
     const x = __modti3(a, b);

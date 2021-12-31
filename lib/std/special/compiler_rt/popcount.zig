@@ -1,5 +1,5 @@
 const builtin = @import("builtin");
-const std = @import("std");
+const std = @import("../../std.zig");
 
 // popcount - population count
 // counts the number of 1 bits

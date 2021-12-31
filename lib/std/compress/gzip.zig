@@ -1,7 +1,7 @@
 //
 // Decompressor for GZIP data streams (RFC1952)
 
-const std = @import("std");
+const std = @import("../std.zig");
 const io = std.io;
 const fs = std.fs;
 const testing = std.testing;

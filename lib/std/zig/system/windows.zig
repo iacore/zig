@@ -1,4 +1,4 @@
-const std = @import("std");
+const std = @import("../../std.zig");
 
 pub const WindowsVersion = std.Target.Os.WindowsVersion;
 

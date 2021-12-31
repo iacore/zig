@@ -1,5 +1,5 @@
 const __fixunsdfdi = @import("fixunsdfdi.zig").__fixunsdfdi;
-const testing = @import("std").testing;
+const testing = @import("../../std.zig").testing;
 
 fn test__fixunsdfdi(a: f64, expected: u64) !void {
     const x = __fixunsdfdi(a);

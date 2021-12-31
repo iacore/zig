@@ -1,5 +1,5 @@
 const __floattidf = @import("floattidf.zig").__floattidf;
-const testing = @import("std").testing;
+const testing = @import("../../std.zig").testing;
 
 fn test__floattidf(a: i128, expected: f64) !void {
     const x = __floattidf(a);

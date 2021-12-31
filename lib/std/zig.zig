@@ -384,5 +384,5 @@ test "parseCharLiteral" {
 }
 
 test {
-    @import("std").testing.refAllDecls(@This());
+    @import("std.zig").testing.refAllDecls(@This());
 }

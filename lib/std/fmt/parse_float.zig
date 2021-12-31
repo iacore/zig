@@ -29,7 +29,7 @@
 // - Only supports round-to-zero
 // - Does not handle denormals
 
-const std = @import("std");
+const std = @import("../std.zig");
 const ascii = std.ascii;
 
 // The mantissa field in FloatRepr is 64bit wide and holds only 19 digits

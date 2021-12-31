@@ -1649,7 +1649,7 @@ test "tokenizer - illegal unicode codepoints" {
 
 test "tokenizer - string identifier and builtin fns" {
     try testTokenize(
-        \\const @"if" = @import("std");
+        \\const @"if" = @import("../std.zig");
     , &.{
         .keyword_const,
         .identifier,

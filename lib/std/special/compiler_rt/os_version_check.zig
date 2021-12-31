@@ -1,4 +1,4 @@
-const testing = @import("std").testing;
+const testing = @import("../../std.zig").testing;
 const builtin = @import("builtin");
 
 // Ported from llvm-project 13.0.0 d7b669b3a30345cfcdb2fde2af6f48aa4b94845d

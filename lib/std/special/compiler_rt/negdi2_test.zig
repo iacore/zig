@@ -1,5 +1,5 @@
 const neg = @import("negXi2.zig");
-const testing = @import("std").testing;
+const testing = @import("../../std.zig").testing;
 
 fn test__negdi2(a: i64, expected: i64) !void {
     var result = neg.__negdi2(a);

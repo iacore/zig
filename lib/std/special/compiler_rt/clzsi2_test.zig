@@ -1,5 +1,5 @@
 const clz = @import("count0bits.zig");
-const testing = @import("std").testing;
+const testing = @import("../../std.zig").testing;
 
 fn test__clzsi2(a: u32, expected: i32) !void {
     // XXX At high optimization levels this test may be horribly miscompiled if

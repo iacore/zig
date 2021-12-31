@@ -72,7 +72,7 @@ pub fn addOption(self: *OptionsStep, comptime T: type, name: []const u8, value: 
         },
         std.builtin.Version => {
             out.print(
-                \\pub const {}: @import("std").builtin.Version = .{{
+                \\pub const {}: @import("../std.zig").builtin.Version = .{{
                 \\    .major = {d},
                 \\    .minor = {d},
                 \\    .patch = {d},
@@ -89,7 +89,7 @@ pub fn addOption(self: *OptionsStep, comptime T: type, name: []const u8, value: 
         },
         std.SemanticVersion => {
             out.print(
-                \\pub const {}: @import("std").SemanticVersion = .{{
+                \\pub const {}: @import("../std.zig").SemanticVersion = .{{
                 \\    .major = {d},
                 \\    .minor = {d},
                 \\    .patch = {d},
@@ -335,12 +335,12 @@ test "OptionsStep" {
         \\    @"0.8.1",
         \\};
         \\pub const keyword_enum: KeywordEnum = KeywordEnum.@"0.8.1";
-        \\pub const version: @import("std").builtin.Version = .{
+        \\pub const version: @import("../std.zig").builtin.Version = .{
         \\    .major = 0,
         \\    .minor = 1,
         \\    .patch = 2,
         \\};
-        \\pub const semantic_version: @import("std").SemanticVersion = .{
+        \\pub const semantic_version: @import("../std.zig").SemanticVersion = .{
         \\    .major = 0,
         \\    .minor = 1,
         \\    .patch = 2,

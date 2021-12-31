@@ -1,5 +1,5 @@
 const parity = @import("parity.zig");
-const testing = @import("std").testing;
+const testing = @import("../../std.zig").testing;
 
 fn parityti2Naive(a: i128) i32 {
     var x = @bitCast(u128, a);
@@ -25,7 +25,7 @@ test "parityti2" {
     try test__parityti2(@bitCast(i128, @as(u128, 0xffffffff_ffffffff_ffffffff_fffffffe)));
     try test__parityti2(@bitCast(i128, @as(u128, 0xffffffff_ffffffff_ffffffff_ffffffff)));
 
-    const RndGen = @import("std").rand.DefaultPrng;
+    const RndGen = @import("../../std.zig").rand.DefaultPrng;
     var rnd = RndGen.init(42);
     var i: u32 = 0;
     while (i < 10_000) : (i += 1) {

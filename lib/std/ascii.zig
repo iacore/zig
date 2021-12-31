@@ -7,7 +7,7 @@
 //
 // https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/USASCII_code_chart.png/1200px-USASCII_code_chart.png
 
-const std = @import("std");
+const std = @import("std.zig");
 
 /// Contains constants for the C0 control codes of the ASCII encoding.
 /// https://en.wikipedia.org/wiki/C0_and_C1_control_codes

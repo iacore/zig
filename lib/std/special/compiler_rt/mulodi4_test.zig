@@ -1,5 +1,5 @@
 const mulo = @import("mulo.zig");
-const testing = @import("std").testing;
+const testing = @import("../../std.zig").testing;
 
 // ported from https://github.com/llvm-mirror/compiler-rt/tree/release_80/test/builtins/Unit
 

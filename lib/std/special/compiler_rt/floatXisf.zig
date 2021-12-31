@@ -1,5 +1,5 @@
 const builtin = @import("builtin");
-const std = @import("std");
+const std = @import("../../std.zig");
 const maxInt = std.math.maxInt;
 
 const FLT_MANT_DIG = 24;

@@ -1,5 +1,5 @@
 const builtin = @import("builtin");
-const std = @import("std");
+const std = @import("../../std.zig");
 const maxInt = std.math.maxInt;
 
 fn floatsiXf(comptime T: type, a: i32) T {

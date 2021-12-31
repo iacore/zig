@@ -1,5 +1,5 @@
 const ffs = @import("count0bits.zig");
-const testing = @import("std").testing;
+const testing = @import("../../std.zig").testing;
 
 fn test__ffsti2(a: u128, expected: i32) !void {
     var x = @bitCast(i128, a);

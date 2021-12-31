@@ -3,7 +3,7 @@
 // https://github.com/llvm/llvm-project/commit/d674d96bc56c0f377879d01c9d8dfdaaa7859cdb/compiler-rt/test/builtins/Unit/divdf3_test.c
 
 const __divdf3 = @import("divdf3.zig").__divdf3;
-const testing = @import("std").testing;
+const testing = @import("../../std.zig").testing;
 
 fn compareResultD(result: f64, expected: u64) bool {
     const rep = @bitCast(u64, result);

@@ -16,7 +16,7 @@
 //! An example root.log might look something like this:
 //!
 //! ```
-//! const std = @import("std");
+//! const std = @import("std.zig");
 //!
 //! // Set the log level to info
 //! pub const log_level: std.log.Level = .info;

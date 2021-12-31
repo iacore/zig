@@ -1,4 +1,4 @@
-const std = @import("std");
+const std = @import("../../../std.zig");
 
 pub fn main() anyerror!void {
     std.log.info("All your codebase are belong to us.", .{});

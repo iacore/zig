@@ -1,5 +1,5 @@
 const __divti3 = @import("divti3.zig").__divti3;
-const testing = @import("std").testing;
+const testing = @import("../../std.zig").testing;
 
 fn test__divti3(a: i128, b: i128, expected: i128) !void {
     const x = __divti3(a, b);

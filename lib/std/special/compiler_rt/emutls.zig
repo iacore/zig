@@ -4,7 +4,7 @@
 // https://github.com/llvm-mirror/compiler-rt/blob/release_80/lib/builtins/emutls.c
 //
 
-const std = @import("std");
+const std = @import("../../std.zig");
 const builtin = @import("builtin");
 
 const abort = std.os.abort;

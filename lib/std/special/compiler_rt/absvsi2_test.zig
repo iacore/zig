@@ -1,5 +1,5 @@
 const absv = @import("absv.zig");
-const testing = @import("std").testing;
+const testing = @import("../../std.zig").testing;
 
 fn test__absvsi2(a: i32, expected: i32) !void {
     var result = absv.__absvsi2(a);

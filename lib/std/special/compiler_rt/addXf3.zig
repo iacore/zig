@@ -2,7 +2,7 @@
 //
 // https://github.com/llvm/llvm-project/blob/02d85149a05cb1f6dc49f0ba7a2ceca53718ae17/compiler-rt/lib/builtins/fp_add_impl.inc
 
-const std = @import("std");
+const std = @import("../../std.zig");
 const builtin = @import("builtin");
 const compiler_rt = @import("../compiler_rt.zig");
 

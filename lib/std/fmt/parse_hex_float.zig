@@ -1,7 +1,7 @@
 // The rounding logic is inspired by LLVM's APFloat and Go's atofHex
 // implementation.
 
-const std = @import("std");
+const std = @import("../std.zig");
 const ascii = std.ascii;
 const fmt = std.fmt;
 const math = std.math;

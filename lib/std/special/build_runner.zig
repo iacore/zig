@@ -1,5 +1,5 @@
 const root = @import("@build");
-const std = @import("std");
+const std = @import("../std.zig");
 const builtin = @import("builtin");
 const io = std.io;
 const fmt = std.fmt;

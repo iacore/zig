@@ -1,5 +1,5 @@
 const __floatuntitf = @import("floatuntitf.zig").__floatuntitf;
-const testing = @import("std").testing;
+const testing = @import("../../std.zig").testing;
 
 fn test__floatuntitf(a: u128, expected: f128) !void {
     const x = __floatuntitf(a);

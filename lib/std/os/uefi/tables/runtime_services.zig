@@ -1,4 +1,4 @@
-const uefi = @import("std").os.uefi;
+const uefi = @import("../../../std.zig").os.uefi;
 const Guid = uefi.Guid;
 const TableHeader = uefi.tables.TableHeader;
 const Time = uefi.Time;

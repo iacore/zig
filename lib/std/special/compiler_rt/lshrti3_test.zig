@@ -1,5 +1,5 @@
 const __lshrti3 = @import("shift.zig").__lshrti3;
-const testing = @import("std").testing;
+const testing = @import("../../std.zig").testing;
 
 fn test__lshrti3(a: i128, b: i32, expected: i128) !void {
     const x = __lshrti3(a, b);

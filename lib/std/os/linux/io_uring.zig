@@ -7,6 +7,10 @@ const os = std.os;
 const linux = os.linux;
 const testing = std.testing;
 
+fn getTempFilePath(comptime path: anytype) @TypeOf("/tmp/test_io_uring_" ++ path) {
+    return "/tmp/test_io_uring_" ++ path;
+}
+
 const io_uring_params = linux.io_uring_params;
 const io_uring_sqe = linux.io_uring_sqe;
 const io_uring_cqe = linux.io_uring_cqe;
@@ -1590,7 +1594,7 @@ test "writev/fsync/readv" {
     };
     defer ring.deinit();
 
-    const path = "test_io_uring_writev_fsync_readv";
+    const path = getTempFilePath("writev_fsync_readv");
     const file = try std.fs.cwd().createFile(path, .{ .read = true, .truncate = true });
     defer file.close();
     defer std.fs.cwd().deleteFile(path) catch {};
@@ -1658,7 +1662,7 @@ test "write/read" {
     };
     defer ring.deinit();
 
-    const path = "test_io_uring_write_read";
+    const path = getTempFilePath("write_read");
     const file = try std.fs.cwd().createFile(path, .{ .read = true, .truncate = true });
     defer file.close();
     defer std.fs.cwd().deleteFile(path) catch {};
@@ -1704,7 +1708,7 @@ test "write_fixed/read_fixed" {
     };
     defer ring.deinit();
 
-    const path = "test_io_uring_write_read_fixed";
+    const path = getTempFilePath("write_read_fixed");
     const file = try std.fs.cwd().createFile(path, .{ .read = true, .truncate = true });
     defer file.close();
     defer std.fs.cwd().deleteFile(path) catch {};
@@ -1761,7 +1765,7 @@ test "openat" {
     };
     defer ring.deinit();
 
-    const path = "test_io_uring_openat";
+    const path = getTempFilePath("openat");
     defer std.fs.cwd().deleteFile(path) catch {};
 
     const flags: u32 = os.O.CLOEXEC | os.O.RDWR | os.O.CREAT;
@@ -1810,7 +1814,7 @@ test "close" {
     };
     defer ring.deinit();
 
-    const path = "test_io_uring_close";
+    const path = getTempFilePath("close");
     const file = try std.fs.cwd().createFile(path, .{});
     errdefer file.close();
     defer std.fs.cwd().deleteFile(path) catch {};
@@ -2115,7 +2119,7 @@ test "fallocate" {
     };
     defer ring.deinit();
 
-    const path = "test_io_uring_fallocate";
+    const path = getTempFilePath("fallocate");
     const file = try std.fs.cwd().createFile(path, .{ .truncate = true, .mode = 0o666 });
     defer file.close();
     defer std.fs.cwd().deleteFile(path) catch {};
@@ -2159,7 +2163,7 @@ test "statx" {
     };
     defer ring.deinit();
 
-    const path = "test_io_uring_statx";
+    const path = getTempFilePath("statx");
     const file = try std.fs.cwd().createFile(path, .{ .truncate = true, .mode = 0o666 });
     defer file.close();
     defer std.fs.cwd().deleteFile(path) catch {};
@@ -2440,8 +2444,8 @@ test "renameat" {
     };
     defer ring.deinit();
 
-    const old_path = "test_io_uring_renameat_old";
-    const new_path = "test_io_uring_renameat_new";
+    const old_path = getTempFilePath("renameat_old");
+    const new_path = getTempFilePath("renameat_new");
 
     // Write old file with data
 
@@ -2509,7 +2513,7 @@ test "unlinkat" {
     };
     defer ring.deinit();
 
-    const path = "test_io_uring_unlinkat";
+    const path = getTempFilePath("unlinkat");
 
     // Write old file with data
 
@@ -2559,7 +2563,7 @@ test "mkdirat" {
     };
     defer ring.deinit();
 
-    const path = "test_io_uring_mkdirat";
+    const path = getTempFilePath("mkdirat");
 
     defer std.fs.cwd().deleteDir(path) catch {};
 
@@ -2602,8 +2606,8 @@ test "symlinkat" {
     };
     defer ring.deinit();
 
-    const path = "test_io_uring_symlinkat";
-    const link_path = "test_io_uring_symlinkat_link";
+    const path = getTempFilePath("symlinkat");
+    const link_path = getTempFilePath("symlinkat_link");
 
     const file = try std.fs.cwd().createFile(path, .{ .truncate = true, .mode = 0o666 });
     defer {
@@ -2651,8 +2655,8 @@ test "linkat" {
     };
     defer ring.deinit();
 
-    const first_path = "test_io_uring_linkat_first";
-    const second_path = "test_io_uring_linkat_second";
+    const first_path = getTempFilePath("linkat_first");
+    const second_path = getTempFilePath("linkat_second");
 
     // Write file with data
 

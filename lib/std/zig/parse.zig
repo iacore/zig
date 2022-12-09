@@ -721,12 +721,21 @@ const Parser = struct {
 
     /// FnProto <- KEYWORD_fn IDENTIFIER? LPAREN ParamDeclList RPAREN ByteAlign? AddrSpace? LinkSection? CallConv? EXCLAMATIONMARK? TypeExpr
     fn parseFnProto(p: *Parser) !Node.Index {
+        return _parseFnProto(p, true);
+    }
+    
+    fn _parseFnProto(p: *Parser, comptime allow_identifier: bool) !Node.Index {
         const fn_token = p.eatToken(.keyword_fn) orelse return null_node;
 
         // We want the fn proto node to be before its children in the array.
         const fn_proto_index = try p.reserveNode();
 
-        _ = p.eatToken(.identifier);
+        
+        const ident_token = p.eatToken(.identifier);
+        if (!allow_identifier and ident_token != null) {
+            try p.warn(.extra_identifier);
+        }
+
         const params = try p.parseParamDeclList();
         const align_expr = try p.parseByteAlign();
         const addrspace_expr = try p.parseAddrSpace();

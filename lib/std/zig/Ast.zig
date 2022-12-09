@@ -2566,6 +2566,7 @@ pub const Error = struct {
         extra_allowzero_qualifier,
         extra_const_qualifier,
         extra_volatile_qualifier,
+        extra_identifier,
         ptr_mod_on_array_child_type,
         invalid_bit_range,
         same_line_doc_comment,

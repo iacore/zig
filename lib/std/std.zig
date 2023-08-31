@@ -146,6 +146,9 @@ pub const process = @import("process.zig");
 /// Fast pseudo-random number generators (i.e. non-cryptographically secure).
 pub const rand = @import("rand.zig");
 
+/// Red-Black Tree.
+pub const rb = @import("rb.zig");
+
 /// Sorting.
 pub const sort = @import("sort.zig");
 

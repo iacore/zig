@@ -2040,15 +2040,20 @@ pub const Dir = struct {
     }
 
     /// Read all of file contents using a preallocated buffer.
-    /// The returned slice has the same pointer as `buffer`. If the length matches `buffer.len`
-    /// the situation is ambiguous. It could either mean that the entire file was read, and
-    /// it exactly fits the buffer, or it could mean the buffer was not big enough for the
-    /// entire file.
+    /// The returned slice has the same pointer as `buffer`.
+    /// If the buffer is not big enough for the entire file, returns error.DestTooSmall.
     pub fn readFile(self: Dir, file_path: []const u8, buffer: []u8) ![]u8 {
         var file = try self.openFile(file_path, .{});
         defer file.close();
 
         const end_index = try file.readAll(buffer);
+        if (end_index == buffer.len) {
+            var buffer_check: [1]u8 = undefined;
+            const end_index_check = try file.read(&buffer_check);
+            if (end_index_check != 0) { // buffer not big enough
+                return error.DestTooSmall;
+            }
+        }
         return buffer[0..end_index];
     }
 
